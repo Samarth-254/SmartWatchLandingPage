@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cpu, Wifi, Maximize, BatteryCharging, Layers, Activity, Check, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const modelsData = {
   "Nexus Ultra": [
@@ -179,6 +179,18 @@ export default function Specs({ isOpen, onClose }) {
   const [selectedModels, setSelectedModels] = useState(["Nexus Ultra", "Nexus Pro", "Nexus Air"]);
   const categories = modelsData["Nexus Ultra"].map(cat => cat.category);
 
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const toggleModel = (model) => {
     if (selectedModels.includes(model)) {
       if (selectedModels.length > 1) {
@@ -207,6 +219,7 @@ export default function Specs({ isOpen, onClose }) {
             exit={{ scale: 0.95, opacity: 0 }}
             className="bg-zinc-900 w-full max-w-6xl max-h-[90vh] rounded-3xl border border-white/10 overflow-hidden flex flex-col relative"
             onClick={(e) => e.stopPropagation()}
+            onWheel={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button 
@@ -238,11 +251,27 @@ export default function Specs({ isOpen, onClose }) {
               </div>
             </div>
 
+            {/* Sticky Product Names Header - Desktop */}
+            <div className="hidden md:block shrink-0 px-8 bg-zinc-900 border-b border-white/10 z-20">
+              <div className={`grid ${gridCols} gap-2 md:gap-4 py-4`}>
+                <div className="col-span-1 flex items-end">
+                  <span className="text-zinc-500 font-mono text-[10px] md:text-xs tracking-wider">SPECIFICATIONS</span>
+                </div>
+                {selectedModels.map((model) => (
+                  <div key={model} className="col-span-1 text-center">
+                    <div className="text-xs text-zinc-500 mb-1">{model === "Nexus Ultra" ? "4-core" : "2-core"}</div>
+                    <h3 className="text-sm md:text-lg font-bold text-white mb-1">{model}</h3>
+                    <div className="text-[10px] md:text-xs text-zinc-500">From {model === "Nexus Ultra" ? "₹79,900" : model === "Nexus Pro" ? "₹39,900" : "₹24,900"}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Scrollable Content */}
-            <div className="overflow-y-auto overflow-x-auto flex-1 p-4 md:p-8 pt-0 custom-scrollbar">
+            <div className="overflow-y-auto overflow-x-auto flex-1 p-4 md:p-8 pt-0 custom-scrollbar overscroll-contain">
               <div className={`${selectedModels.length > 2 ? 'min-w-[600px] md:min-w-[700px]' : 'w-full'}`}>
-                {/* Sticky Header Row */}
-                <div className={`grid ${gridCols} gap-2 md:gap-4 mb-6 border-b border-white/10 pb-4 sticky top-0 bg-zinc-900 z-20 pt-4`}>
+                {/* Mobile Sticky Header Row */}
+                <div className={`md:hidden grid ${gridCols} gap-2 md:gap-4 mb-6 border-b border-white/10 pb-4 sticky top-0 bg-zinc-900 z-20 pt-4`}>
                   <div className="col-span-1 flex items-end">
                     <span className="text-zinc-500 font-mono text-[10px] md:text-xs tracking-wider">SPECIFICATIONS</span>
                   </div>
@@ -253,6 +282,9 @@ export default function Specs({ isOpen, onClose }) {
                     </div>
                   ))}
                 </div>
+
+                {/* Desktop spacing */}
+                <div className="hidden md:block h-4"></div>
 
                 {/* Specs Rows */}
                 {categories.map((category, catIdx) => (
