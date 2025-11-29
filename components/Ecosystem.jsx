@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Smartphone, Headphones, Laptop, Activity, Music } from 'lucide-react';
+import { Smartphone, Headphones, Laptop, Activity, Music, Home, CreditCard, Car, Tablet, Cloud } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Ecosystem() {
@@ -42,6 +42,41 @@ export default function Ecosystem() {
       label: "Streaming", 
       title: "Unlimited Media.",
       description: "Access your favorite music and podcast apps. Download playlists for offline listening during your adventures."
+    },
+    { 
+      id: 5,
+      icon: <Home className="w-8 h-8" />,
+      label: "Smart Home",
+      title: "Home Control.",
+      description: "Control lights, locks, thermostats and scenes directly from your wrist — simple, secure, and instant."
+    },
+    { 
+      id: 6,
+      icon: <CreditCard className="w-8 h-8" />,
+      label: "Payments",
+      title: "Tap to Pay.",
+      description: "Make secure, tokenized payments, view recent transactions, and manage cards on the go."
+    },
+    { 
+      id: 7,
+      icon: <Car className="w-8 h-8" />,
+      label: "Vehicle",
+      title: "Vehicle Connect.",
+      description: "Connect to your car for remote start, lock status, and driving metrics synced to your watch."
+    },
+    { 
+      id: 8,
+      icon: <Tablet className="w-8 h-8" />,
+      label: "Tablet",
+      title: "Extended View.",
+      description: "Open detailed maps, training plans and analytics on your tablet for deeper insights."
+    },
+    { 
+      id: 9,
+      icon: <Cloud className="w-8 h-8" />,
+      label: "Cloud",
+      title: "Backups & Sync.",
+      description: "Encrypted cloud backups keep preferences, settings and health data safe and synced across devices."
     },
   ];
 
