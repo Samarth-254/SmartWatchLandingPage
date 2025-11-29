@@ -1,10 +1,10 @@
-# Nexus Ultra Smartwatch Landing Page ⌚
+# Nexus Smartwatch Landing Page ⌚
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-0055FF?style=for-the-badge&logo=framer)
 
-A premium, high-performance landing page for the fictional **Nexus Ultra Smartwatch**. This project demonstrates a modern, responsive, and interactive marketing site built with the latest web technologies.
+A premium, high-performance landing page for the fictional **Nexus Smartwatch**. This project demonstrates a modern, responsive, and interactive marketing site built with the latest web technologies.
 
 ## 🚀 Features
 
