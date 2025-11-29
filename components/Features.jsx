@@ -68,7 +68,7 @@ const features = [
     description: 'Understand your sleep stages. See how much time you spent in REM, Core, or Deep sleep.',
     detail: 'Wake up to a detailed report of your sleep quality. The Sleep app doesn\'t just track your sleep, it works with your iPhone to help you create a schedule and bedtime routine.',
     // icon: <Moon className="w-8 h-8 text-white" />,
-    image: 'https://images.unsplash.com/photo-1517137879134-48acf67b9043?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1495364141860-b0d03eccd065?q=80&w=2076&auto=format&fit=crop',
     stat: '8H 12M'
   },
   {
@@ -79,7 +79,7 @@ const features = [
     description: 'Measure your blood oxygen level with a revolutionary sensor and app.',
     detail: 'Your blood oxygen level is a key indicator of your overall wellness. It can help you understand how well your body is absorbing oxygen and the amount of oxygen delivered to your body.',
     // icon: <Activity className="w-8 h-8 text-white" />,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=2070&auto=format&fit=crop',
     stat: '98%'
   },
   {
@@ -90,7 +90,7 @@ const features = [
     description: 'Automatically detects severe car crashes and calls for help if you can\'t.',
     detail: 'Using a high-g accelerometer and gyroscope, Nexus detects the forces of a crash and automatically connects you to emergency services and notifies your emergency contacts.',
     // icon: <AlertTriangle className="w-8 h-8 text-white" />,
-    image: 'https://images.unsplash.com/photo-1626668020738-97529854853b?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop',
     stat: 'SOS'
   },
   {
@@ -101,7 +101,7 @@ const features = [
     description: 'The brightest display we\'ve ever created. Easy to read even in direct sunlight.',
     detail: 'With up to 3000 nits of brightness, the Always-On Retina display is legible in the harshest conditions. Night Mode activates automatically in low light to preserve your night vision.',
     // icon: <Zap className="w-8 h-8 text-white" />,
-    image: 'https://images.unsplash.com/photo-1551817958-29d0660f9805?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=2072&auto=format&fit=crop',
     stat: '3000 Nits'
   },
   {
