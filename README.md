@@ -64,7 +64,7 @@ A premium, high-performance landing page for the fictional **Nexus Ultra Smartwa
 
 ## 🌐 Live Demo
 
-Check out the live version of the project here: [Live Demo Link](https://your-project-url.vercel.app)
+Check out the live version of the project here: [Live Demo Link](https://smart-watch-landing-page-flame.vercel.app/)
 
 ## 📄 License
 
